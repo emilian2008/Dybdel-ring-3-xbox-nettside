@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xbox</title>
+    <link rel="icon" type="image/png" href="Media/favicon_xbox.png">
+    <link rel="stylesheet" href="CSS/css.css">
+</head>
+<body>
+
+    <!-- Navigation Menu -->
+    <nav class="top-menu">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#consoles">Consoles</a></li>
+            <li><a href="#games">Games</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section with Parallax Video Background -->
+    <div id="home" class="parallax">
+        <video id="bg-video" autoplay muted>
+            <source src="Media/video1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="content">
+            <h1>Welcome to Xbox</h1>
+            <p>Discover the ultimate gaming experience.</p>
+        </div>
+    </div>
+
+    <!-- Consoles Section -->
+    <div id="consoles">
+        <h2>Consoles</h2>
+        <p>Explore the latest Xbox Series X and Series S.</p>
+    </div>
+
+    <!-- Games Section -->
+    <div id="games">
+        <h2>Games</h2>
+        <p>Find the best games for your Xbox console.</p>
+    </div>
+
+    <!-- About Section -->
+    <div id="about">
+        <h2>About</h2>
+        <p>Learn more about Xbox's journey in gaming.</p>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact">
+        <h2>Contact</h2>
+        <p>Get in touch with the Xbox team.</p>
+    </div>
+
+    <script>
+        var video = document.getElementById("bg-video");
+
+        // Function to pause the video and freeze at the last frame
+        video.onended = function() {
+            video.pause();  // Pause the video when it ends
+            video.currentTime = video.duration; // Set to the last frame
+        };
+
+        // Ensuring video does not loop
+        video.loop = false; // Disable looping if there is any previous loop setting
+    </script>
+
+</body>
+</html>
