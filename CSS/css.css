@@ -1,0 +1,99 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%; /* Ensures the body takes up full height */
+}
+
+/* Top Navigation Menu */
+.top-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: black; /* Xbox theme color */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+.top-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.top-menu li {
+    margin: 0;
+}
+
+.top-menu a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    transition: background 0.3s, color 0.3s;
+}
+
+.top-menu a:hover {
+    background-color: #107c10; /* Xbox green */
+    color: black;
+}
+
+/* Parallax Effect */
+.parallax {
+    position: relative;
+    background: #101010; /* fallback color */
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+    background-attachment: fixed; /* This keeps the background fixed */
+    background-size: cover; /* Ensures video/image covers the section */
+}
+
+/* Video Background */
+#bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video fills the screen properly */
+    pointer-events: none; /* Prevents the video from blocking interactions */
+}
+
+/* Content Styling */
+.content {
+    position: relative;
+    z-index: 1; /* Ensures content is above the video */
+    text-align: center;
+    color: white;
+    margin-top: 20%; /* Centers content vertically */
+}
+
+h1 {
+    font-size: 3em;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+}
+
+p {
+    font-size: 1.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Section Styling */
+#home, #consoles, #games, #about, #contact {
+    padding: 100px 20px;
+    text-align: center;
+    min-height: 100vh;
+    background-color: #101010; /* Xbox theme background */
+    color: white;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
